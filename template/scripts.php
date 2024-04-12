@@ -12,3 +12,4 @@
 <!-- Template Main JS File -->
 <script src="js/main.js"></script>
 <script  src="js/script.js"></script>
+<script  src="js/custom.js"></script>

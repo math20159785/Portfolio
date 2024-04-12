@@ -1,6 +1,6 @@
 <header id="header">
   <div class="container">
-    <h1><a href="index-2.html">Mathew Paule</a></h1>
+    <h1><a href="#">Mathew Paule</a></h1>
     <h2>IT Specialist /<span> Web Developer</span></h2>
     <nav id="navbar" class="navbar">
       <ul>
