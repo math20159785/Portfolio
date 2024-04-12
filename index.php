@@ -1,19 +1,19 @@
+<?php // include 'template/pin.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php include 'path/config.php'; ?>
+    <?php include 'template/config.php'; ?>
 </head>
-
 <body>
-<?php include 'path/loading.php'; ?>
 
-<?php include 'path/header.php'; ?>
-<?php include 'path/about.php'; ?>
-<?php include 'path/resume.php'; ?>
-<?php include 'path/portfolio.php'; ?>
-<?php include 'path/contact.php'; ?>
+<?php include 'template/loading.php'; ?>
+<?php include 'template/header.php'; ?>
+<?php include 'template/about.php'; ?>
+<?php include 'template/resume.php'; ?>
+<?php include 'template/portfolio.php'; ?>
+<?php include 'template/contact.php'; ?>
 
 <div class="credits">own by <a href="#">Mathew Paule</a></div>
-<?php include 'path/scripts.php'; ?>
+<?php include 'template/scripts.php'; ?>
 </body>
 </html>
