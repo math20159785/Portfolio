@@ -1,0 +1,160 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+    color: var(--text);
+}
+
+.preloader-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.preloader-logo span {
+    color: var(--primary);
+}
+
+.preloader-progress {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.preloader-bar {
+    height: 100%;
+    background: var(--primary);
+    width: 0%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.preloader-percentage {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.preloader-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.preloader-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--text);
+    border-radius: 50%;
+    opacity: 0;
+    animation: preloaderDot 1.5s infinite ease-in-out;
+}
+
+.preloader-dot:nth-child(1) { animation-delay: 0s; }
+.preloader-dot:nth-child(2) { animation-delay: 0.2s; }
+.preloader-dot:nth-child(3) { animation-delay: 0.4s; }
+.preloader-dot:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes preloaderDot {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* PIN Entry Styles */
+.pin-entry {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+.pin-form {
+    background: var(--dark-light);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    max-width: 400px;
+    width: 90%;
+}
+
+.pin-input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--dark);
+    border: 2px solid var(--text-muted);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+
+.pin-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.pin-keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pin-key {
+    padding: 1rem;
+    background: var(--dark);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pin-key:hover {
+    background: var(--primary);
+}
+
+.pin-error {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    display: none;
+}

@@ -1,19 +1,25 @@
-<?php // include 'template/pin.php'; ?>
+<?php
+// Uncomment the line below if you want to use PIN protection
+// include 'components/pin.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include 'template/config.php'; ?>
+    <?php include 'includes/config.php'; ?>
 </head>
 <body>
-
-<?php include 'template/loading.php'; ?>
-<?php include 'template/header.php'; ?>
-<?php include 'template/about.php'; ?>
-<?php include 'template/resume.php'; ?>
-<?php include 'template/portfolio.php'; ?>
-<?php include 'template/contact.php'; ?>
-
-<div class="credits">own by <a href="#">Mathew Paule</a></div>
-<?php include 'template/scripts.php'; ?>
+    <?php include 'components/preloader.php'; ?>
+    <?php include 'includes/header.php'; ?>
+    
+    <main id="main-content">
+        <?php include 'pages/home.php'; ?>
+        <?php include 'pages/about.php'; ?>
+        <?php include 'pages/resume.php'; ?>
+        <?php include 'pages/portfolio.php'; ?>
+        <?php include 'pages/contact.php'; ?>
+    </main>
+    
+    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/scripts.php'; ?>
 </body>
 </html>
